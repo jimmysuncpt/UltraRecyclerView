@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="UltraRecyclerView">
+        <attr name="orientation">
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+        <attr name="alignGravity">
+            <flag name="center" value="0x11" />
+            <flag name="start" value="0x00800003" />
+            <flag name="end" value="0x00800005" />
+        </attr>
+        <attr name="alignMargin" format="dimension"/>
+        <attr name="infiniteLoop" format="boolean"/>
+    </declare-styleable>
+</resources>

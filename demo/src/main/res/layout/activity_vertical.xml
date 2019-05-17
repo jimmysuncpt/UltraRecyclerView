@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.jimmysun.ultrarecyclerview.UltraRecyclerView
+        android:id="@+id/ultra_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:alignGravity="start"
+        app:orientation="vertical"/>
+
+    <Button
+        android:id="@+id/btn_apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Apply"/>
+
+    <LinearLayout
+        android:id="@+id/layout_auto_scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_apply"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_auto_scroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Auto Scroll, duration:"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/et_duration"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLines="1"
+            android:text="5000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="ms, speed:"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/et_speed"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLines="1"
+            android:text="-1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="ms"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/cb_infinite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/layout_auto_scroll"
+        android:text="Infinite Loop"
+        android:textColor="@android:color/black"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/cb_infinite"
+        android:gravity="center_vertical">
+
+        <CheckBox
+            android:id="@+id/cb_pager_snap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Pager Snap, gravity:"
+            android:textColor="@android:color/black"/>
+
+        <Button
+            android:id="@+id/btn_gravity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="margin:"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/et_margin"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLines="1"
+            android:text="0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="dp"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+</RelativeLayout>
