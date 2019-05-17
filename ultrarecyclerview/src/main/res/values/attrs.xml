@@ -1,16 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <attr name="alignGravity" format="integer">
+        <flag name="center" value="0x11"/>
+        <flag name="start" value="0x00800003"/>
+        <flag name="end" value="0x00800005"/>
+    </attr>
+    <attr name="alignMargin" format="dimension"/>
+    <attr name="infiniteLoop" format="boolean"/>
+
     <declare-styleable name="UltraRecyclerView">
         <attr name="orientation">
             <enum name="horizontal" value="0"/>
             <enum name="vertical" value="1"/>
         </attr>
-        <attr name="alignGravity">
-            <flag name="center" value="0x11" />
-            <flag name="start" value="0x00800003" />
-            <flag name="end" value="0x00800005" />
+        <attr name="alignGravity"/>
+        <attr name="alignMargin"/>
+        <attr name="infiniteLoop"/>
+    </declare-styleable>
+
+    <declare-styleable name="BannerView">
+        <attr name="alignGravity"/>
+        <attr name="alignMargin"/>
+        <attr name="infiniteLoop"/>
+        <attr name="indicatorVisibility">
+            <!-- Visible on screen; the default value. -->
+            <enum name="visible" value="0"/>
+            <!-- Not displayed, but taken into account during layout (space is left for it). -->
+            <enum name="invisible" value="1"/>
+            <!-- Completely hidden, as if the view had not been added. -->
+            <enum name="gone" value="2"/>
         </attr>
-        <attr name="alignMargin" format="dimension"/>
-        <attr name="infiniteLoop" format="boolean"/>
+        <attr name="indicatorBottomMargin" format="dimension"/>
+        <attr name="indicatorSelectedWidth" format="dimension"/>
+        <attr name="indicatorDefaultWidth" format="dimension"/>
+        <attr name="indicatorHeight" format="dimension"/>
+        <attr name="indicatorMargin" format="dimension"/>
+        <attr name="indicatorSelectedColor" format="color"/>
+        <attr name="indicatorDefaultColor" format="color"/>
     </declare-styleable>
 </resources>

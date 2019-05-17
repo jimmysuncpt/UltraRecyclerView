@@ -1,6 +1,7 @@
 package com.jimmysun.ultrarecyclerview;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.support.annotation.ColorInt;
 import android.support.annotation.Px;
 import android.support.v7.widget.RecyclerView;
@@ -29,11 +30,13 @@ public class BannerView extends RelativeLayout {
     public BannerView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context);
+        init(context, attrs);
     }
 
     public BannerView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context);
+        init(context, attrs);
     }
 
     private void init(Context context) {
@@ -46,6 +49,25 @@ public class BannerView extends RelativeLayout {
         layoutParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
         layoutParams.bottomMargin = Utils.dip2px(context, INDICATOR_BOTTOM_MARGIN);
         addView(mIndicator, layoutParams);
+    }
+
+    private void init(Context context, AttributeSet attrs) {
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.BannerView);
+        int gravity = typedArray.getInt(R.styleable.BannerView_alignGravity, Gravity.NO_GRAVITY);
+        int margin = typedArray.getDimensionPixelSize(R.styleable.BannerView_alignMargin, 0);
+        setPagerSnap(gravity, margin);
+        setInfiniteLoop(typedArray.getBoolean(R.styleable.BannerView_infiniteLoop, false));
+        setIndicatorVisibility(typedArray.getInt(R.styleable.BannerView_indicatorVisibility,
+                VISIBLE));
+        setIndicatorBottomMargin(typedArray.getDimensionPixelSize(R.styleable.BannerView_indicatorBottomMargin, Utils.dip2px(context, INDICATOR_BOTTOM_MARGIN)));
+        setIndicatorSelectedWidth(typedArray.getDimensionPixelSize(R.styleable.BannerView_indicatorSelectedWidth, -1));
+        setIndicatorDefaultWidth(typedArray.getDimensionPixelSize(R.styleable.BannerView_indicatorDefaultWidth, -1));
+        setIndicatorHeight(typedArray.getDimensionPixelSize(R.styleable.BannerView_indicatorHeight, -1));
+        setIndicatorMargin(typedArray.getDimensionPixelSize(R.styleable.BannerView_indicatorMargin, -1));
+        setIndicatorSelectedColor(typedArray.getColor(R.styleable.BannerView_indicatorSelectedColor, UltraRecyclerViewIndicator.SELECTED_COLOR));
+        setIndicatorDefaultColor(typedArray.getColor(R.styleable.BannerView_indicatorDefaultColor
+                , UltraRecyclerViewIndicator.DEFAULT_COLOR));
+        typedArray.recycle();
     }
 
     /**

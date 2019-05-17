@@ -35,8 +35,6 @@ public class HorizontalActivity extends AppCompatActivity {
         setContentView(R.layout.activity_horizontal);
         mBannerView = findViewById(R.id.banner_view);
         mBannerView.setAdapter(new MyAdapter(RecyclerView.HORIZONTAL));
-        mBannerView.setPagerSnap(mAlignGravity);
-        mBannerView.setInfiniteLoop(true);
         mPagerSnapCheckBox = findViewById(R.id.cb_pager_snap);
         mAlignGravityButton = findViewById(R.id.btn_gravity);
         mAlignGravityButton.setOnClickListener(new View.OnClickListener() {

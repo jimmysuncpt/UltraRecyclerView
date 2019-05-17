@@ -19,11 +19,11 @@ import android.widget.LinearLayout;
  * @since 2019-05-17
  */
 public class UltraRecyclerViewIndicator extends LinearLayout {
-    private static final int DEFAULT_WIDTH = 10;
-    private static final int DEFAULT_HEIGHT = 2;
-    private static final int DEFAULT_MARGIN = 5;
-    private static final int SELECTED_COLOR = 0xccffffff;
-    private static final int DEFAULT_COLOR = 0x4d868e9e;
+    public static final int DEFAULT_WIDTH = 10;
+    public static final int DEFAULT_HEIGHT = 2;
+    public static final int DEFAULT_MARGIN = 5;
+    public static final int SELECTED_COLOR = 0xccffffff;
+    public static final int DEFAULT_COLOR = 0x4d868e9e;
 
     private View[] mViews;
     private int mSelectedWidth, mDefaultWidth, mHeight, mMargin;
@@ -79,19 +79,27 @@ public class UltraRecyclerViewIndicator extends LinearLayout {
     }
 
     public void setSelectedWidth(@Px int selectedWidth) {
-        mSelectedWidth = selectedWidth;
+        if (selectedWidth >= 0) {
+            mSelectedWidth = selectedWidth;
+        }
     }
 
     public void setDefaultWidth(@Px int defaultWidth) {
-        mDefaultWidth = defaultWidth;
+        if (defaultWidth >= 0) {
+            mDefaultWidth = defaultWidth;
+        }
     }
 
     public void setHeight(@Px int height) {
-        mHeight = height;
+        if (height >= 0) {
+            mHeight = height;
+        }
     }
 
     public void setMargin(@Px int margin) {
-        mMargin = margin;
+        if (margin >= 0) {
+            mMargin = margin;
+        }
     }
 
     public void setSelectedColor(@ColorInt int selectedColor) {
