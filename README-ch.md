@@ -27,13 +27,18 @@
 
 ```
 // gradle
-
+implementation 'com.jimmysun:ultrarecyclerview:1.0.0'
 ```
 或者maven：
 
 ```
 // pom.xml in maven
-
+<dependency>
+	<groupId>com.jimmysun</groupId>
+	<artifactId>ultrarecyclerview</artifactId>
+	<version>1.0.0</version>
+	<type>pom</type>
+</dependency>
 ```
 
 在layout中使用UltraRecyclerView：
