@@ -41,11 +41,11 @@ Returns whether the items are infinite loop.
 ```java
 void startAutoScroll()
 ```
-Starts auto scrolling, the duration time is 5s and the start delay-time is 0.
+Starts auto scrolling, and the duration time is 5s.
 ```java
 void startAutoScroll(int duration)
 ```
-Starts auto scrolling, the duration is specified, and the start delay-time is 0.
+Starts auto scrolling, and the duration is specified.
 ```java
 void startAutoScrollDelayed(int delay)
 ```
