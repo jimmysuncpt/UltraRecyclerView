@@ -74,7 +74,7 @@ You can follow my tutorial below on how to use UltraRecyclerView:
 
 ```java
 mUltraRecyclerView = findViewById(R.id.ultra_recycler_view);
-// initialize MyAdapter，which extends RecyclerView.Adapter
+// initialize MyAdapter, which extends RecyclerView.Adapter
 mUltraRecyclerView.setAdapter(new MyAdapter(RecyclerView.VERTICAL));
 // set orientation
 mUltraRecyclerView.setOrientation(RecyclerView.VERTICAL);
@@ -82,7 +82,7 @@ mUltraRecyclerView.setOrientation(RecyclerView.VERTICAL);
 mUltraRecyclerView.setPagerSnap(Gravity.START, 0);
 // set an infinite loop
 mUltraRecyclerView.setInfiniteLoop(true);
-// enable or disable auto-scroll mode
+// start auto-scroll
 mUltraRecyclerView.startAutoScroll(2000);
 mUltraRecyclerView.setAutoScrollSpeed(500);
 ```
@@ -91,7 +91,7 @@ or use BannerView in java:
 
 ```java
 mBannerView = findViewById(R.id.banner_view);
-// initialize MyAdapter，which extends RecyclerView.Adapter
+// initialize MyAdapter, which extends RecyclerView.Adapter
 mBannerView.setAdapter(new MyAdapter(RecyclerView.HORIZONTAL));
 // set pager snap
 mBannerView.setPagerSnap(Gravity.CENTER);
