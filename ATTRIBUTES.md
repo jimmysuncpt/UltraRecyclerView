@@ -11,11 +11,11 @@ Sets the scroll orientation.
 ```java
 void setPagerSnap(int gravity)
 ```
-Enables or disables pager snap and sets align gravity.
+Enables or disables pager snap and sets align gravity (Gravity.START, Gravity.CENTER and Gravity.END).
 ```java
 void setPagerSnap(int gravity, @Px int alignMargin)
 ```
-Enables or disables pager snap, and sets align gravity and margin.
+Enables or disables pager snap, and sets align gravity (Gravity.START, Gravity.CENTER and Gravity.END) and margin.
 ```java
 boolean isPagerSnap()
 ```
