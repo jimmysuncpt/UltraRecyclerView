@@ -11,7 +11,7 @@ Project `UltraRecyclerView` is a RecyclerView extension that encapsulates multip
 #### Main Feature
 
 * support horizontal scrolling and vertical scrolling
-* support pager snap. support setting align gravity and margin
+* support pager snap. support setting align gravity (start, center and end) and margin
 * support switching views circularly. For example, if there are 3 views to display in a RecyclerView, it should switch back to the first view after the third view.
 * support auto-scrolling feature，implemented timer with Handler.
 * BannerView has a built-in indicator. support setting bottom margin, height, inner margin, and width and color of the selected and default status.
