@@ -143,7 +143,7 @@ public class UltraRecyclerView extends RecyclerView {
     }
 
     /**
-     * Enables pager snap, and sets align gravity and margin.
+     * Enables or disables pager snap, and sets align gravity and margin.
      *
      * @param gravity     The align gravity. Should be one of {@link Gravity#CENTER},
      *                    {@link Gravity#START}, {@link Gravity#END}, or {@link Gravity#NO_GRAVITY}.
@@ -198,14 +198,14 @@ public class UltraRecyclerView extends RecyclerView {
     }
 
     /**
-     * Starts auto scrolling, the duration and start delay-time are default.
+     * Starts auto scrolling, and the duration is default.
      */
     public void startAutoScroll() {
         startAutoScroll(AUTO_SCROLL_DURATION);
     }
 
     /**
-     * Starts auto scrolling, the duration is specified, and the start delay-time is default.
+     * Starts auto scrolling, and the duration is specified.
      *
      * @param duration The duration in milliseconds.
      */
@@ -282,7 +282,7 @@ public class UltraRecyclerView extends RecyclerView {
     }
 
     /**
-     * Sets auto scrolling speed.
+     * Sets auto scrolling speed and interpolator.
      *
      * @param duration     The duration in milliseconds when scrolling. Sets negative number to
      *                     restore default.
