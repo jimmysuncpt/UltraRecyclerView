@@ -12,7 +12,6 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 
 import com.jimmysun.ultrarecyclerview.BannerView;
-import com.jimmysun.ultrarecyclerview.R;
 import com.jimmysun.ultrarecyclerview.Utils;
 
 public class HorizontalActivity extends AppCompatActivity {

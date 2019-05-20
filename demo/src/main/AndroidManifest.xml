@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.jimmysun.ultrarecyclerview"
+<manifest package="com.jimmysun.ultrarecyclerview.demo"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".demo.MainActivity"
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -20,11 +20,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".demo.HorizontalActivity"
+            android:name=".HorizontalActivity"
             android:label="Horizontal Demo"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".demo.VerticalActivity"
+            android:name=".VerticalActivity"
             android:label="Vertical Demo"
             android:screenOrientation="portrait"/>
     </application>

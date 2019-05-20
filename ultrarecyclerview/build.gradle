@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 28
@@ -27,4 +28,14 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     api 'com.android.support:recyclerview-v7:28.0.0'
+}
+
+publish {
+    userOrg = 'jimmysuncpt'
+    repoName = 'maven'
+    groupId = 'com.jimmysun'
+    artifactId = 'ultrarecyclerview'
+    publishVersion = VERSION_NAME
+    desc = 'UltraRecyclerView is an extension for RecyclerView to provide multiple features in a single RecyclerView.'
+    website = 'https://github.com/jimmysuncpt/UltraRecyclerView'
 }
