@@ -26,13 +26,18 @@ Using Gradle:
 
 ```
 // gradle
-
+implementation 'com.jimmysun:ultrarecyclerview:1.0.0'
 ```
 or grab via Maven:
 
 ```
 // pom.xml in maven
-
+<dependency>
+	<groupId>com.jimmysun</groupId>
+	<artifactId>ultrarecyclerview</artifactId>
+	<version>1.0.0</version>
+	<type>pom</type>
+</dependency>
 ```
 
 Create your own layout using a UltraRecyclerView:
