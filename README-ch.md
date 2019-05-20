@@ -1,41 +1,42 @@
 ### UltraRecyclerView
 
-[中文文档](README-ch.md)
+[English Document](README.md)
 
-Project `UltraRecyclerView` is a RecyclerView extension that encapsulates multiple features.
+#### 简介
+`UltraRecyclerView`是一个封装多种特性的RecyclerView。
 
-#### Screenshots
+#### 截图
 <img src="images/horizontal.gif" width="40%" height="40%"/>
 <img src="images/vertical.gif" width="40%" height="40%"/>
 
-#### Main Feature
+#### 主要功能
 
-* support horizontal scrolling and vertical scrolling
-* support pager snap. support setting align gravity and margin
-* support switching views circularly. For example, if there are 3 views to display in a RecyclerView, it should switch back to the first view after the third view.
-* support auto-scrolling feature，implemented timer with Handler.
-* BannerView has a built-in indicator. support setting bottom margin, height, inner margin, and width and color of the selected and default status.
+* 支持横向滑动／纵向滑动
+* 支持分页滑动，并且支持对齐方式和距离
+* 支持循环滚动
+* 支持定时滚动，计时器使用Handler实现
+* BannerView内置指示器，支持设置底部距离、已选/默认的颜色和宽度、高度和内部距离
 
-you can combine multiple features at the same time.
+以上特性支持同时使用。
 
-#### Usage
+#### 使用方法
 
-Please find the latest version(1.0.0 so far) in maven repository. The newest version has been upload to jcenter, make sure you have added at least one of these repositories.
+版本请参考mvn repository上的最新版本（目前最新版本是1.0.0），最新的都会发布到 jcenter 上，确保配置了这个仓库源，然后引入依赖：
 
-Using Gradle:
+使用Gradle:
 
 ```
 // gradle
 
 ```
-or grab via Maven:
+或者maven：
 
 ```
 // pom.xml in maven
 
 ```
 
-Create your own layout using a UltraRecyclerView:
+在layout中使用UltraRecyclerView：
 
 activity_recycler_view.xml
 
@@ -50,7 +51,7 @@ activity_recycler_view.xml
     app:infiniteLoop="true"/>
 ```
 
-or using a BannerView:
+或者使用BannerView:
 
 ```xml
 <com.jimmysun.ultrarecyclerview.BannerView
@@ -70,48 +71,48 @@ or using a BannerView:
     app:indicatorVisibility="visible"/>
 ```
 
-You can follow my tutorial below on how to use UltraRecyclerView:
+可以参考以下步骤使用UltraRecyclerView:
 
 ```java
 mUltraRecyclerView = findViewById(R.id.ultra_recycler_view);
-// initialize MyAdapter, which extends RecyclerView.Adapter
+// 初始化MyAdapter，其继承于RecyclerView.Adapter
 mUltraRecyclerView.setAdapter(new MyAdapter(RecyclerView.VERTICAL));
-// set orientation
+// 设置方向
 mUltraRecyclerView.setOrientation(RecyclerView.VERTICAL);
-// set pager snap, including align gravity and margin
+// 设置分页模式，包括对齐方式和距离
 mUltraRecyclerView.setPagerSnap(Gravity.START, 0);
-// set an infinite loop
+// 设置无限循环
 mUltraRecyclerView.setInfiniteLoop(true);
-// start auto-scroll
+// 开启自动滚动
 mUltraRecyclerView.startAutoScroll(2000);
 mUltraRecyclerView.setAutoScrollSpeed(500);
 ```
 
-or use BannerView in java:
+或者在Java中使用BannerView：
 
 ```java
 mBannerView = findViewById(R.id.banner_view);
-// initialize MyAdapter, which extends RecyclerView.Adapter
+// 初始化MyAdapter，其继承于RecyclerView.Adapter
 mBannerView.setAdapter(new MyAdapter(RecyclerView.HORIZONTAL));
-// set pager snap
+// 设置分页模式
 mBannerView.setPagerSnap(Gravity.CENTER);
-// set an infinite loop
+// 设置无限循环
 mBannerView.setInfiniteLoop(true);
-// set style of indicator
+// 设置指示器的样式
 mBannerView.setIndicatorBottomMargin(24);
 mBannerView.setIndicatorSelectedColor(Color.GREEN);
 mBannerView.setIndicatorDefaultColor(Color.WHITE);
 ```
 
-For other API reference,see [this](ATTRIBUTES.md) to read more.
+Api接口详情请参考[文档](ATTRIBUTES-ch.md)
 
 #### FAQ
-* How to refresh data? you can refresh data by the below method:
+* 如何刷新数据？可以使用如下方法：
     * ultraRecyclerView.refresh();
 
-#### DEMO
+#### 示例
 
-[Demo Project](https://github.com/jimmysuncpt/UltraRecyclerView/tree/master/demo)
+[Demo工程](https://github.com/jimmysuncpt/UltraRecyclerView/tree/master/demo)
 
-#### LICENSE
-`UltraRecyclerView` is available under the MIT license.
+#### 开源许可证
+`UltraRecyclerView`遵循MIT开源许可证协议。
