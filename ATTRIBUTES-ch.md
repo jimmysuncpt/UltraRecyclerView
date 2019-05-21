@@ -11,11 +11,11 @@ void setOrientation(int orientation)
 ```java
 void setPagerSnap(int gravity)
 ```
-设置分页模式，包括对齐方式。
+设置分页模式，包括对齐方式。对齐方式包括顶部对齐(Gravity.START)、居中对齐(Gravity.CENTER)和尾部对齐(Gravity.END)。
 ```java
 void setPagerSnap(int gravity, @Px int alignMargin)
 ```
-设置分页模式，包括对齐方式和距离。
+设置分页模式，包括对齐方式和距离。对齐方式包括顶部对齐(Gravity.START)、居中对齐(Gravity.CENTER)和尾部对齐(Gravity.END)。
 ```java
 boolean isPagerSnap()
 ```
