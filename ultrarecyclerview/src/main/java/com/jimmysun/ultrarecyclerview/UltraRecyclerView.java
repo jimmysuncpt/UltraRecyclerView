@@ -236,7 +236,8 @@ public class UltraRecyclerView extends RecyclerView {
             mScrollRunnable = new Runnable() {
                 @Override
                 public void run() {
-                    if (!mStopAutoScroll && mRecyclerViewAdapter != null && getLayoutManager() != null) {
+                    if (!mStopAutoScroll && mRecyclerViewAdapter != null
+                            && mRecyclerViewAdapter.getItemCount() > 0 && getLayoutManager() != null) {
                         mSmoothScroller.setTargetPosition((getCurrentPosition() + 1) % mRecyclerViewAdapter.getItemCount());
                         if (mAutoScrollSpeed > 0) {
                             setScrollSpeed(mAutoScrollSpeed, mInterpolator);
@@ -409,7 +410,7 @@ public class UltraRecyclerView extends RecyclerView {
     @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
-        if (isInfiniteLoop()) {
+        if (isInfiniteLoop() && mRecyclerViewAdapter.getRealCount() > 0) {
             int position =
                     Integer.MAX_VALUE / 2 - ((Integer.MAX_VALUE / 2) % mRecyclerViewAdapter.getRealCount());
             scrollToPosition(position);
