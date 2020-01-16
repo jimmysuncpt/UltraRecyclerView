@@ -27,7 +27,7 @@
 
 ```
 // gradle
-implementation 'com.jimmysun:ultrarecyclerview:1.0.0'
+implementation 'com.jimmysun:ultrarecyclerview:1.0.2'
 ```
 或者maven：
 
@@ -36,7 +36,7 @@ implementation 'com.jimmysun:ultrarecyclerview:1.0.0'
 <dependency>
 	<groupId>com.jimmysun</groupId>
 	<artifactId>ultrarecyclerview</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.2</version>
 	<type>pom</type>
 </dependency>
 ```
