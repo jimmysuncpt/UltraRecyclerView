@@ -27,7 +27,7 @@
 
 ```
 // gradle
-implementation 'com.jimmysun:ultrarecyclerview:1.0.2'
+implementation 'com.jimmysun:ultrarecyclerview:1.1.0'
 ```
 或者maven：
 
@@ -36,7 +36,7 @@ implementation 'com.jimmysun:ultrarecyclerview:1.0.2'
 <dependency>
 	<groupId>com.jimmysun</groupId>
 	<artifactId>ultrarecyclerview</artifactId>
-	<version>1.0.2</version>
+	<version>1.1.0</version>
 	<type>pom</type>
 </dependency>
 ```
@@ -66,7 +66,10 @@ activity_recycler_view.xml
     app:alignGravity="center"
     app:alignMargin="0dp"
     app:infiniteLoop="true"
+    app:indicatorGravity="bottom|center_horizontal"
     app:indicatorBottomMargin="8dp"
+    app:indicatorLeftMargin="8dp"
+    app:indicatorRightMargin="8dp"
     app:indicatorSelectedColor="#FFFFFFFF"
     app:indicatorDefaultColor="#4D868E9E"
     app:indicatorSelectedWidth="10dp"
@@ -104,6 +107,7 @@ mBannerView.setPagerSnap(Gravity.CENTER);
 // 设置无限循环
 mBannerView.setInfiniteLoop(true);
 // 设置指示器的样式
+mBannerView.setIndicatorGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL);
 mBannerView.setIndicatorBottomMargin(24);
 mBannerView.setIndicatorSelectedColor(Color.GREEN);
 mBannerView.setIndicatorDefaultColor(Color.WHITE);

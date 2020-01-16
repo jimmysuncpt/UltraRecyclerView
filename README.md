@@ -26,7 +26,7 @@ Using Gradle:
 
 ```
 // gradle
-implementation 'com.jimmysun:ultrarecyclerview:1.0.2'
+implementation 'com.jimmysun:ultrarecyclerview:1.1.0'
 ```
 or grab via Maven:
 
@@ -35,7 +35,7 @@ or grab via Maven:
 <dependency>
 	<groupId>com.jimmysun</groupId>
 	<artifactId>ultrarecyclerview</artifactId>
-	<version>1.0.2</version>
+	<version>1.1.0</version>
 	<type>pom</type>
 </dependency>
 ```
@@ -65,7 +65,10 @@ or using a BannerView:
     app:alignGravity="center"
     app:alignMargin="0dp"
     app:infiniteLoop="true"
+    app:indicatorGravity="bottom|center_horizontal"
     app:indicatorBottomMargin="8dp"
+    app:indicatorLeftMargin="8dp"
+    app:indicatorRightMargin="8dp"
     app:indicatorSelectedColor="#FFFFFFFF"
     app:indicatorDefaultColor="#4D868E9E"
     app:indicatorSelectedWidth="10dp"
@@ -103,6 +106,7 @@ mBannerView.setPagerSnap(Gravity.CENTER);
 // set an infinite loop
 mBannerView.setInfiniteLoop(true);
 // set style of indicator
+mBannerView.setIndicatorGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL);
 mBannerView.setIndicatorBottomMargin(24);
 mBannerView.setIndicatorSelectedColor(Color.GREEN);
 mBannerView.setIndicatorDefaultColor(Color.WHITE);
