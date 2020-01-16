@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.animation.Interpolator;
-import android.widget.RelativeLayout;
+import android.widget.FrameLayout;
 
 /**
  * Banner View
@@ -16,7 +16,7 @@ import android.widget.RelativeLayout;
  * @author SunQiang
  * @since 2019-05-17
  */
-public class BannerView extends RelativeLayout {
+public class BannerView extends FrameLayout {
     private static final int INDICATOR_BOTTOM_MARGIN = 8;
 
     private UltraRecyclerView mUltraRecyclerView;
@@ -45,8 +45,7 @@ public class BannerView extends RelativeLayout {
         mIndicator = new UltraRecyclerViewIndicator(context);
         LayoutParams layoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT,
                 LayoutParams.WRAP_CONTENT);
-        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-        layoutParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        layoutParams.gravity = Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL;
         layoutParams.bottomMargin = Utils.dip2px(context, INDICATOR_BOTTOM_MARGIN);
         addView(mIndicator, layoutParams);
     }
