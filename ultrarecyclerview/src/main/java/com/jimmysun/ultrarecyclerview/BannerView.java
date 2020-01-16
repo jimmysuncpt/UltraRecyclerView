@@ -58,7 +58,12 @@ public class BannerView extends FrameLayout {
         setInfiniteLoop(typedArray.getBoolean(R.styleable.BannerView_infiniteLoop, false));
         setIndicatorVisibility(typedArray.getInt(R.styleable.BannerView_indicatorVisibility,
                 VISIBLE));
+        setIndicatorGravity(typedArray.getInt(R.styleable.BannerView_indicatorGravity,
+                Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL));
         setIndicatorBottomMargin(typedArray.getDimensionPixelSize(R.styleable.BannerView_indicatorBottomMargin, Utils.dip2px(context, INDICATOR_BOTTOM_MARGIN)));
+        setIndicatorLeftMargin(typedArray.getDimensionPixelSize(R.styleable.BannerView_indicatorLeftMargin, 0));
+        setIndicatorRightMargin(typedArray.getDimensionPixelSize(R.styleable.BannerView_indicatorRightMargin, 0));
+        setIndicatorTopMargin(typedArray.getDimensionPixelSize(R.styleable.BannerView_indicatorTopMargin, 0));
         setIndicatorSelectedWidth(typedArray.getDimensionPixelSize(R.styleable.BannerView_indicatorSelectedWidth, -1));
         setIndicatorDefaultWidth(typedArray.getDimensionPixelSize(R.styleable.BannerView_indicatorDefaultWidth, -1));
         setIndicatorHeight(typedArray.getDimensionPixelSize(R.styleable.BannerView_indicatorHeight, -1));
@@ -242,6 +247,17 @@ public class BannerView extends FrameLayout {
     }
 
     /**
+     * Sets gravity of the indicator.
+     *
+     * @param gravity Gravity of the indicator.
+     */
+    public void setIndicatorGravity(int gravity) {
+        LayoutParams layoutParams = (LayoutParams) mIndicator.getLayoutParams();
+        layoutParams.gravity = gravity;
+        mIndicator.requestLayout();
+    }
+
+    /**
      * Sets bottom margin of the indicator.
      *
      * @param margin Bottom margin of the indicator in px.
@@ -249,6 +265,39 @@ public class BannerView extends FrameLayout {
     public void setIndicatorBottomMargin(@Px int margin) {
         LayoutParams layoutParams = (LayoutParams) mIndicator.getLayoutParams();
         layoutParams.bottomMargin = margin;
+        mIndicator.requestLayout();
+    }
+
+    /**
+     * Sets left margin of the indicator.
+     *
+     * @param margin Left margin of the indicator in px.
+     */
+    public void setIndicatorLeftMargin(@Px int margin) {
+        LayoutParams layoutParams = (LayoutParams) mIndicator.getLayoutParams();
+        layoutParams.leftMargin = margin;
+        mIndicator.requestLayout();
+    }
+
+    /**
+     * Sets right margin of the indicator.
+     *
+     * @param margin Right margin of the indicator in px.
+     */
+    public void setIndicatorRightMargin(@Px int margin) {
+        LayoutParams layoutParams = (LayoutParams) mIndicator.getLayoutParams();
+        layoutParams.rightMargin = margin;
+        mIndicator.requestLayout();
+    }
+
+    /**
+     * Sets top margin of the indicator.
+     *
+     * @param margin Top margin of the indicator in px.
+     */
+    public void setIndicatorTopMargin(@Px int margin) {
+        LayoutParams layoutParams = (LayoutParams) mIndicator.getLayoutParams();
+        layoutParams.topMargin = margin;
         mIndicator.requestLayout();
     }
 
